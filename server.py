@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def my_home():
     return render_template('index.html')
-j
+
 
 def write_to_csv(data):
     with open('database.csv', newline="", mode="a") as database:
