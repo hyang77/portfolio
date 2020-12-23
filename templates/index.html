@@ -27,6 +27,55 @@
   </head>
 
   <body class="">
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+    
+    @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+    </style>
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+    </div>
     <!-- Add your content of header -->
     <div
       class="background-color-layer"
@@ -38,7 +87,7 @@
     >
       <header class="white-text-container section-container">
         <div class="text-center">
-          <h1>Hello!<br />I am Haoli Yang</h1>
+          <h1>Hello!<br />I am <span style="text-shadow: 5px 4px #2cb67d;">Haoli Yang</span></h1>
           <p>Front-End Developer / Full-Stack Developer</p>
           <p>
             <a
@@ -96,13 +145,16 @@
                       I'm Haoli Yang from Taiwan, currently living in Chicago.
                       I'm a second year graduate student studying master's
                       degree in Information Technology and Management at
-                      Illinois Institute of Technology.
+                      Illinois Institute of Technology (IIT).
                     </p>
-                    <p></p>
+
+                    <p> My interests are in frontend and full-stack development, and I enjoy building interactive and functional websites with delightful user experience. Also, I like working in a team to exchange ideas and solve challenging problems. Being a team player makes me feel engaged, happy and learn faster.</p>
+
+                    <p>Aside from coding, I am an activity volunteer at IIT Taiwanese Association, assisting in new coming Taiwanes students and organizing events for the association.</p>
                     <p>
                       For a closer look at the professional work I have done,
-                      check out my <a href="#projects">projects</a>below. And if you're interested in
-                      reaching out me, I'd love to <a href="#connect">connect</a> and
+                      check out my <a href="#projects">projects</a> below. And if you're interested in
+                      reaching out me, I'd love to <a href="mailto:hyang77@hawk.iit.edu">connect</a> and
                       work with you!
                     </p>
                   </div>
@@ -117,22 +169,34 @@
                 <h2 id="projects">Projects</h2>
                 <div class="row">
 
-                  
-
+                  <!-- Project - Expense Tracker -->
+                  <div class="col-md-4">
+                    <img
+                      src="../static/assets/images/expensetracker.jpg"
+                      class="img-responsive"
+                      alt=""
+                    />
+                    <h3 class="h5">Expense Tracker - <small>Dec 2020</small></h3>
+                    <p><b><i class="fa fa-code" style="color:orange"></i></b> Express, JavaScript, HTML, CSS, Chart.js, Bootstrap, MongoDB</p>
+                    <p>This web application helps users manage their personal expenses. Features include allowing users to delete/update/create an expense, viewing monthly expenses via a list or a pie chart. </p>
+                    <p><a href="https://www.youtube.com/watch?v=Ra2wN07UJTY" class="btn btn-primary">View Demo</a>&nbsp;&nbsp;<a href="https://github.com/hyang77/expense-tracker-js" class="btn btn-default">View Code</a></p>
+                  </div>
 
                   <!-- Project - Smart brain -->
                   <div class="col-md-4">
                     <img
-                      src="../static/assets/images/smart-brain-image.PNG"
+                      src="../static/assets/images/smartbrain.JPG"
                       class="img-responsive"
                       alt=""
                     />
                     <h3 class="h5">Smart Brain - <small>Sep 2020</small></h3>
-                    <p><b><i class="fa fa-code" style="color:orange"></i></b> React, Express, PostgreSQL, Fetch API</p>
-                    <p>This app integrates with Face Detection model from <a href="https://www.clarifai.com/models/face-detection">Clarifai API</a>, which can recognize human's face when users paste image url on the input box. Once users registered, they can login and the app will count how many times they have pasted the face images.</p>
+                    <p><b><i class="fa fa-code" style="color:orange"></i></b> React, Express, PostgreSQL, Fetch API, CSS</p>
+                    <p>This app integrates with Face Detection model from <a href="https://www.clarifai.com/models/face-detection">Clarifai API</a>, which can recognize human's face when users paste image url on the input box. Once users register, they can login and the app will count how many times they have detected the face images.</p>
                     <p><a href="https://smart-brain-holly.herokuapp.com/" class="btn btn-primary">View Live</a>&nbsp;&nbsp;<a href="https://github.com/hyang77/smartbrain-front-end" class="btn btn-default">View Code</a></p>
                   </div>
-                  <div class="col-md-4">
+
+                  <!-- Project - Chicago Crime -->
+                  <!-- <div class="col-md-4">
                     <img
                         src="../static/assets/images/chicago-crime-data-analysis-image.jpg"
                         class="img-responsive"
@@ -142,56 +206,34 @@
                     <p><b><i class="fa fa-code" style="color:orange"></i></b> Python, Pandas, Matplotlib</p>
                     <p>This project aims to perform Chicago crime data analysis using open source libraries such as Pandas and Matplotlib. Data is extracted from <a href="https://data.cityofchicago.org/Public-Safety/Chicago-Police-Department-Illinois-Uniform-Crime-R/c7ck-438e">the Chicago Police Department’s CLEAR</a> system, reflecting reported incidents of crime that occurred in the City of Chicago from 2012 to 2017. </p>
                     <p><a href="project01.html" class="btn btn-primary">View Details</a>&nbsp;&nbsp;<a href="" class="btn btn-default">View Code</a></p>
-                  </div>
+                  </div> -->
 
                   <!-- Project - Brand website -->
                   <div class="col-md-4">
                     <img
-                      src="../static/assets/images/enterprise-website-image.jpg"
+                      src="../static/assets/images/brandwebsite.JPG"
                       class="img-responsive"
                       alt=""
                     />
-                    <h3 class="h5">Brand Website - <small>May to Aug 2020</small></h3>
-                    <p><b><i class="fa fa-code" style="color:orange"></i></b> React, React Router, Bootstrap</p>
-                    <p>I have been building this website for the furniture company in Taiwan since this summer. This is a static web version for me to learn how to build a website from scratch. All products are stored in arrays and called locally. Now I'm working on building RESTful API to allow data stored in the database, making it dynamic!</p>
+                    <h3 class="h5">Brand Website - <small>May to June 2020</small></h3>
+                    <p><b><i class="fa fa-code" style="color:orange"></i></b> React, React Router, HTML, CSS,  Bootstrap</p>
+                    <p>This brand website was built for the furniture company in Taiwan. Users who visit this website can view business information, search and view products, view geographic information about the company and leave a message to the company.</p>
                     <p><a href="https://hyang77.github.io/huhyi-website/" class="btn btn-primary">View Demo</a>&nbsp;&nbsp;<a href="https://github.com/hyang77/huhyi-website" class="btn btn-default">View Code</a></p>
                   </div>
 
-                  <!-- <div class="col-md-4">
-                    <img
-                      src="../static/assets/images/"
-                      class="img-responsive"
-                      alt=""
-                    />
-                    <h3 class="h5">Enterprise Website</h3>
-                    <p>May 2020 - Aug 2020</p>
-                  </div> -->
-
                   <!-- Project - Redesign linkedin interface -->
-                  <div class="col-md-4">
+                  <!-- <div class="col-md-4">
                     <img
                       src="../static/assets/images/redesign-linkedin-image.jpg"
                       class="img-responsive"
                       alt=""
                     />
                     <h3 class="h5">Redesign LinkedIn - <small>Mar to May 2020</small></h3>
-                    <p><b><i class="fa fa-pencil" style="color:orange"></i></b> UI/UX Design, Wireframes, Prototyping</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum explicabo obcaecati cumque eaque illo dolorem ipsam alias delectus consequatur soluta eius esse ab hic at dolorum iure, fugit dicta. Suscipit.</p>
+                    <p><b><i class="fa fa-pencil" style="color:orange"></i></b> Contextual Inquiry, UI/UX Design, Wireframes, Prototyping</p>
+                    <p>This project aims to solve layouts and user-flow challenges to deliver more usable and delightful job search experience for LinkedIn users.</p>
                     <p><a href="" class="btn btn-primary">View Details</a></p>
-                  </div>
-
-                  <!-- Project - Restaurant food ordering system
-                  <div class="col-md-4">
-                    <img
-                      src="../static/assets/images/food-ordering-system-image.jpg"
-                      class="img-responsive"
-                      alt=""
-                    />
-                    <h3 class="h5">Restaurant Food Ordering System - <small>Nov 2019 - Dec 2019</small></h3>
-                    <p><b><i class="fa fa-code" style="color:orange"></i></b>Java, JDBC, MySQL Workbech</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam incidunt labore voluptatum sint corporis saepe eligendi! Velit neque reiciendis, fugit inventore voluptate quaerat id, eaque cum tenetur quisquam sed!</p>
-                    <p><a href="" class="btn btn-primary">View Details</a>&nbsp;&nbsp;<a href="" class="btn btn-default">View Code</a></p>
                   </div> -->
+
                 </div>
               </div>
             </div>
@@ -205,7 +247,7 @@
                   <div class="col-md-4">
                     <p>
                       <img
-                        src="../static/assets/images/robofriends-image.jpg"
+                        src="../static/assets/images/robofriends.JPG"
                         class="img-responsive"
                         alt=""
                       />
@@ -226,7 +268,7 @@
                   <div class="col-md-4">
                     <p>
                       <img
-                        src="../static/assets/images/dog-gallery-image.jpg"
+                        src="../static/assets/images/doggallery.JPG"
                         class="img-responsive"
                         alt=""
                       />
@@ -246,7 +288,7 @@
                   <div class="col-md-4">
                     <p>
                       <img
-                        src="../static/assets/images/tax-calculator-image.jpg"
+                        src="../static/assets/images/taxcalc.JPG"
                         class="img-responsive"
                         alt=""
                       />
@@ -257,7 +299,7 @@
                     <p>
                       This app allows users to calculate their total costs after entering the subtotal and sales tax rate.
                     </p>
-                    <p>It is also the first few JavaScript projects I did to practing basic input valiadation, calculation, and DOM manipulation.</p>
+
                     <p><a href="https://hyang77.github.io/sales-tax-calculator/" class="btn btn-primary">View Live</a>&nbsp;&nbsp;<a href="https://github.com/hyang77/sales-tax-calculator" class="btn btn-default">View Code</a></p>
                   </div>
                 </div>
@@ -267,7 +309,7 @@
                   <div class="col-md-4">
                     <p>
                       <img
-                        src="../static/assets/images/timer-image.jpg"
+                        src="../static/assets/images/countdown.JPG"
                         class="img-responsive"
                         alt=""
                       />
@@ -392,21 +434,20 @@
                   <div class="col-md-4">
                     <div class="language-experience">
                       <h3 class="h5">Web Technologies</h3>
-                      <p>HTML, CSS, Babel, Webpack, Ajax, JSON</p>
+                      <p>HTML, CSS, Babel, Webpack, AJAX, JSON</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="language-experience">
                       <h3 class="h5">Web Development Framework</h3>
-                      <p>React.js, Express/Node.js, Flask, Bootstrap</p>
+                      <p>React.js, Express/Node.js, Bootstrap, jQuery</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="language-experience">
-                      <h3 class="h5">Database System</h3>
+                      <h3 class="h5">Database</h3>
                       <p>
-                        MongoDB, PostgreSQL, SQLite, Oracle database, MySQL
-                        Workbench
+                        MongoDB, PostgreSQL, MySQL, SQLite, Oracle database
                       </p>
                     </div>
                   </div>
@@ -418,9 +459,9 @@
                   </div>
                   <div class="col-md-4">
                     <div class="language-experience">
-                      <h3 class="h5">Tools</h3>
+                      <h3 class="h5">Knowledge</h3>
                       <p>
-                        Visual Studio Code, Git, npm package manager
+                        Git, Object-Oriented Programming, Responsive Web Design, MVC Design Pattern, UI/UX principles
                       </p>
                     </div>
                   </div>
@@ -515,7 +556,7 @@
               </div>
             </div> -->
 
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-block">
                 <h2 id="connect">Contact</h2>
                 <form action="submit_form" method="post" class="reveal-content">
@@ -552,7 +593,8 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </div> -->
+
           </div>
         </div>
       </div>
